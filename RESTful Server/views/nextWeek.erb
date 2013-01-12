@@ -40,7 +40,7 @@
 
       .popover {
         width: 500px;
-        min-height: 350px;
+        height: 350px;
       }
 
       tbody tr {
@@ -125,9 +125,9 @@
       <div class="navbar">
         <div class="navbar-inner">
           <ul class="nav">
-            <li <%= 'class="active"' if @displayMode == 'Today' %>><a href="/">Today</a></li>
-            <li <%= 'class="active"' if @displayMode == 'Tomorrow' %>><a href="/tomorrow">Tomorrow</a></li>
-            <li><a href="/nextWeek">Next Week</a></li>
+            <li><a href="/">Today</a></li>
+            <li><a href="/tomorrow">Tomorrow</a></li>
+            <li class="active"><a href="/nextWeek">Next Week</a></li>
           </ul>
         </div>
       </div>
@@ -139,11 +139,17 @@
       </div>
       -->
 
+      <%# This is where we need to loop through to write out the concerts for each day %>
+      <% @days.each do |day| %>
+
       <br>
 
       <div class="date-title pull-right">
-        <h1><%= @displayMode %></h1>
-        <p class="muted pull-right lead"><%= @currentDay %></p>
+        <h1>
+          <% date = DateTime.strptime(day.first[:date], "%FT%H:%M:%S%:z") %>
+          <%= date.strftime('%A') %>
+        </h1>
+        <p class="muted pull-right lead"><%= date.strftime('%b %-d') %></p>
       </div>
 
       <! ======== List of concerts =======-->
@@ -159,7 +165,7 @@
         <tbody>
 
           <% count = 0 %>
-          <%  @concertList.each do |concert| %>
+          <%  day.each do |concert| %>
           <tr class="concert <%= 'colored' if (count % 2) == 0 %>" data-id="#<%= concert[:id] %>">
             <td>
               <% concert[:artists].split(',').each do |artist| %>
@@ -170,7 +176,7 @@
             <td style="white-space:nowrap;">
               <% date = DateTime.strptime(concert[:date], "%FT%H:%M:%S%:z") %>
               <time datetime="<%= concert[:date] %>">
-                <%= date.strftime("%l %p")%>
+                <%= date.strftime("%F %l %p")%>
               </time>
             </td>
           </tr>
@@ -190,11 +196,14 @@
             </p>
             <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=<%=concert[:address] %>&size=480x200&sensor=false">
           </div>
+
           <% count += 1 %>
           <% end %>
 
         </tbody>
       </table>
+
+      <% end %>
 
       <! ==============================-->
 
