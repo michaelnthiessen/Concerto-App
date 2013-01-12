@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Template &middot; Bootstrap</title>
+    <title>Concerto - Today</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Michael Thiessen">
 
     <!-- Le styles -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -38,13 +38,24 @@
         padding: 14px 24px;
       }
 
-      /* Supporting marketing content */
-      .marketing {
-        margin: 60px 0;
+      .popover {
+        width: 500px;
+        height: 300px;
       }
-      .marketing p + h4 {
-        margin-top: 28px;
+
+      tbody tr {
+        cursor: hand;
+        cursor: pointer;
       }
+
+      .date-title h1 {
+        margin-bottom: 5px;
+      }
+
+      div.date-title {
+        padding-bottom: 20px;
+      }
+
     </style>
     <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -78,47 +89,80 @@
       <hr>
 
       <div class="jumbotron">
-        <h1>Introducing Concerto,</h1>
+        <h1>Introducing<br>Concerto,</h1>
         <p class="lead">A new way to find local concerts in Manitoba</p>
         <br>
-        <a class="btn btn-large btn-primary" href="#">Add your own concert</a>
+        <a class="btn btn-large btn-primary" id="bigbutton" href="#">Add your own concert</a>
       </div>
-      
-      <hr>
+
       <br>
 
-      <table class="table table-striped">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <ul class="nav">
+            <li class="active"><a href="#">Today</a></li>
+            <li><a href="#">Tomorrow</a></li>
+            <li><a href="#">Next Week</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--
+      <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Did you know?</strong> If you click on a concert, you can view details about it
+      </div>
+      -->
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>Today</h1>
+        <p class="muted pull-right lead">Jan 11</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
         <thead>
           <tr>
             <th>Artists</th>
             <th>Venue</th>
             <th>Time</th>
-            <th>Admission</th>
           </tr>
         </thead>
         <tbody>
 
-          <%  @concertList.each do |concert| %>
-          <tr>
+          <%  @todayList.each do |concert| %>
+          <tr data-id="#<%= concert[:id] %>">
             <td>
               <% concert[:artists].split(',').each do |artist| %>
                 <%= artist + "<br>" if artist.length > 0%>
               <% end %>
             </td>
             <td><%= concert[:venue] %></td>
-            <td>
-              <% date = Date.strptime(concert[:date], "%FT%H:%M:%S%:z") %>
-              <%= date.strftime("%l %p")%>
-              <%= concert[:date] %>
+            <td style="white-space:nowrap;">
+              <% date = DateTime.strptime(concert[:date], "%FT%H:%M:%S%:z") %>
+              <time datetime="<%= concert[:date] %>">
+                <%= date.strftime("%l %p")%>
+              </time>
             </td>
-            <td>FREE</td>
           </tr>
+          <div id="<%= concert[:id] %>" style="display:none">
+            <%= concert[:venue] %>
+          </div>
           <% end %>
 
         </tbody>
-
-
       </table>
+
+      <! ==============================-->
+
+      <div id="detail-container" style="display:none">
+        <div>
+          This is where all of the awesome details of the concert will go.
+        </div>
+      </div>
 
       <hr>
 
@@ -132,19 +176,11 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="/assets/js/jquery.js"></script>
-    <script src="/assets/js/bootstrap-transition.js"></script>
-    <script src="/assets/js/bootstrap-alert.js"></script>
-    <script src="/assets/js/bootstrap-modal.js"></script>
-    <script src="/assets/js/bootstrap-dropdown.js"></script>
-    <script src="/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="/assets/js/bootstrap-tab.js"></script>
-    <script src="/assets/js/bootstrap-tooltip.js"></script>
-    <script src="/assets/js/bootstrap-popover.js"></script>
-    <script src="/assets/js/bootstrap-button.js"></script>
-    <script src="/assets/js/bootstrap-collapse.js"></script>
-    <script src="/assets/js/bootstrap-carousel.js"></script>
-    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/custom.js"></script>
+
+    <link href="/assets/css/site-specific.css" rel="stylesheet">
 
   </body>
 </html>

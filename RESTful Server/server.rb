@@ -40,7 +40,8 @@ get '/' do
 
 	# Get our concert data
 	database = Sequel.connect('postgres://Michael@127.0.0.1:5432/concerts')
-	@concertList = database.from(:concerts).order(:date).first(100)
+	@todayList = database.from(:concerts).where(:date => (Date.today)..(Date.today + 1)).order(:date)
+	# @tomorrowList = database.from(:concerts).where(:date => (Date.today + 1)..(Date.today + 2)).order(:date)
 
 	# Render our page
 	erb :index

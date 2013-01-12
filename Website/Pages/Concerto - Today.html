@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Concerto - Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Michael Thiessen">
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      .popover {
+        width: 500px;
+        height: 300px;
+      }
+
+      tbody tr {
+        cursor: hand;
+        cursor: pointer;
+      }
+
+      .date-title h1 {
+        margin-bottom: 5px;
+      }
+
+      div.date-title {
+        padding-bottom: 20px;
+      }
+
+    </style>
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="muted">Concerto</h3>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <h1>Introducing<br>Concerto,</h1>
+        <p class="lead">A new way to find local concerts in Manitoba</p>
+        <br>
+        <a class="btn btn-large btn-primary" id="bigbutton" href="#">Add your own concert</a>
+      </div>
+
+      <br>
+
+      <div class="navbar">
+        <div class="navbar-inner">
+          <ul class="nav">
+            <li class="active"><a href="#">Today</a></li>
+            <li><a href="#">Tomorrow</a></li>
+            <li><a href="#">Next Week</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--
+      <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Did you know?</strong> If you click on a concert, you can view details about it
+      </div>
+      -->
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>Today</h1>
+        <p class="muted pull-right lead">Jan 11</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          <tr>
+            <td>
+              
+                
+              
+                A Symphonic Night in Havana<br>
+              
+                Winnipeg Symphony Orchestra<br>
+              
+                Tiempo Libre<br>
+              
+            </td>
+            <td>Centennial Concert Hall</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Bill Hamilton<br>
+              
+            </td>
+            <td>Prairie Ink Grant Park</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                EP Release<br>
+              
+                Tara de Castro<br>
+              
+            </td>
+            <td>Park Theatre</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Mad Young Darlings<br>
+              
+                The Civil Disobedients<br>
+              
+                New Rennaissance<br>
+              
+                Warplane<br>
+              
+            </td>
+            <td>The Zoo</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Harden<br>
+              
+                Nine Lives<br>
+              
+                Tone Control<br>
+              
+            </td>
+            <td>Ozzy's</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Rapaholics Anonymous<br>
+              
+                40 oz.<br>
+              
+                Big Pesh & Halfstar<br>
+              
+                Filthy Animals<br>
+              
+                Kenny G & Kenny Wu<br>
+              
+                Rise of Elohim<br>
+              
+                Royal T & Lev<br>
+              
+                Sleep Clinic<br>
+              
+                Triple Cyanide & Kode<br>
+              
+                Webster Death & Grimmace the Butler<br>
+              
+            </td>
+            <td>Pyramid Cabaret</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Erin Propp<br>
+              
+                marijosee<br>
+              
+                Larry Roy<br>
+              
+            </td>
+            <td>Winnipeg Free Press News Cafe</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Beef Donut<br>
+              
+                Kato Destroy<br>
+              
+                Seafreezing<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                The JD Edwards Band<br>
+              
+            </td>
+            <td>Shannon's Irish Pub</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Darren Lavallee<br>
+              
+            </td>
+            <td>LA Roadhouse</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                The Catie St. Germain Band<br>
+              
+            </td>
+            <td>Blue Dolphin Lounge  - South Beach Casino</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                DJ Massive<br>
+              
+                Spazz<br>
+              
+            </td>
+            <td>Level Two Niteclub</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                DJ Special K<br>
+              
+                Orbit X<br>
+              
+            </td>
+            <td>The Oak</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                DJ Heavy<br>
+              
+            </td>
+            <td>Tijuana Yacht Club</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Mike and the Eastwood Gang<br>
+              
+            </td>
+            <td>Pony Corral Grant Park</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Groovetime in the Neighbourhood<br>
+              
+            </td>
+            <td>The Neighbourhood Bookstore & Cafe</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Out Loud Series 1<br>
+              
+                Big Trouble in Little China<br>
+              
+                Everyone's Fired<br>
+              
+                Quagmire<br>
+              
+            </td>
+            <td>West End Cultural Centre</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Marc Labossiere<br>
+              
+            </td>
+            <td>Palomino Club</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Diana Desjardins Band<br>
+              
+            </td>
+            <td>Royal George</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Electric Kitten<br>
+              
+                JD Francis<br>
+              
+                Tec G<br>
+              
+            </td>
+            <td>Area Nightclub</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Rockalypso<br>
+              
+            </td>
+            <td>The Loft Gastropub</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Free Ride<br>
+              
+            </td>
+            <td>Big A</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                SLOOHAI<br>
+              
+            </td>
+            <td>Upperdeck Sports Bar</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                The Blackout City Kids<br>
+              
+            </td>
+            <td>Toukie's Lounge</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                The Catfish<br>
+              
+            </td>
+            <td>Garbonzo's Pizza Pub</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                DJ Drux<br>
+              
+                DJ Hollywood Hype<br>
+              
+            </td>
+            <td>Whiskey Dix</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                The DCW Band<br>
+              
+            </td>
+            <td>Highway 75 Blues & Sports Bar</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T21:30:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Slow Motion Walter<br>
+              
+            </td>
+            <td>King's Head Pub</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                Grant Davidson<br>
+              
+            </td>
+            <td>Le Garage Cafe</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              
+                
+              
+                12th Anniversary Celebration<br>
+              
+                The Perpetrators<br>
+              
+            </td>
+            <td>Times Change(d) High & Lonesome Club</td>
+            <td style="white-space:nowrap;">
+              
+              <time datetime="2013-01-11T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+          
+
+        </tbody>
+      </table>
+
+      <! ==============================-->
+
+      <div id="detail-container" style="display:none">
+        <div>
+          This is where all of the awesome details of the concert will go.
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Michael Thiessen 2013, built with <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>, <a href="">Sinatra</a>, and <a href="">Heroku</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/custom.js"></script>
+
+    <link href="/assets/css/site-specific.css" rel="stylesheet">
+
+  </body>
+</html>
