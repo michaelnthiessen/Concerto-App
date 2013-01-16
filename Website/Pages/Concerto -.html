@@ -1,0 +1,4593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Concerto - </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Michael Thiessen">
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      .popover {
+        width: 500px;
+        height: 350px;
+      }
+
+      tbody tr {
+        cursor: hand;
+        cursor: pointer;
+      }
+
+      .date-title h1 {
+        margin-bottom: 5px;
+      }
+
+      div.date-title {
+        padding-bottom: 20px;
+      }
+
+      tbody tr.colored td{
+        background-color: #F5F5F5;
+      }
+
+      img.img-rounded {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      p.admission {
+        float: right;
+        text-align: right;
+      }
+
+      p.address {
+        float: left;
+      }
+
+      .detail-container {
+        font-weight: 300;
+        overflow: auto;
+        width: 100%;
+        display: none;
+      }
+
+      .address:first-line, .admission:first-line {
+        font-weight: 500;
+      }
+
+      td.artists:first-line {
+        font-weight: 500;
+      }
+
+      .concert {
+        font-weight: 300;
+      }
+
+    </style>
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="muted">Concerto</h3>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <h1>Introducing<br>Concerto,</h1>
+        <p class="lead">A new way to find local concerts in Manitoba</p>
+        <br>
+        <a class="btn btn-large btn-primary" id="bigbutton" href="#">Add your own concert</a>
+      </div>
+
+      <br>
+
+      <div class="navbar">
+        <div class="navbar-inner">
+          <ul class="nav">
+            <li><a href="/">Today</a></li>
+            <li><a href="/tomorrow">Tomorrow</a></li>
+            <li class="active"><a href="/nextWeek">Next Week</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--
+      <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Did you know?</strong> If you click on a concert, you can view details about it
+      </div>
+      -->
+
+      
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Tuesday
+        </h1>
+        <p class="muted pull-right lead">Jan 15</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1315">
+            <td class="artists">
+              
+                
+              
+                Music n' Mavens<br>
+              
+                Ariel Posen<br>
+              
+                Tracy Kasner Greaves<br>
+              
+            </td>
+            <td>Berney Theatre, Rady Jewish Community Centre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T14:00:00-06:00">
+                 2 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1315" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              123 Doncaster St.<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=123 Doncaster St., Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1316">
+            <td class="artists">
+              
+                
+              
+                Curtis Newton<br>
+              
+            </td>
+            <td>Silver Heights Restaurant and Lounge</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1316" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              2169 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=2169 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1317">
+            <td class="artists">
+              
+                
+              
+                Tim Butler<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1317" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1318">
+            <td class="artists">
+              
+                
+              
+                Soul Nite<br>
+              
+                Dr. Hotbottom & The Soul Rx<br>
+              
+            </td>
+            <td>Cavern</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1318" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              112 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=112 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1319">
+            <td class="artists">
+              
+                
+              
+                DJ Blimey Boy<br>
+              
+                Johnny Lektrik<br>
+              
+                Pop Tart<br>
+              
+            </td>
+            <td>Five Fifty Five</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1319" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Osborne<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Osborne, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1322">
+            <td class="artists">
+              
+                
+              
+                Devin Townsend Project<br>
+              
+                Gojira<br>
+              
+                The Atlas Moth<br>
+              
+            </td>
+            <td>Garrick Centre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1322" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              330 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=330 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1321">
+            <td class="artists">
+              
+                
+              
+                Jam Night<br>
+              
+                Transcona Troubadours<br>
+              
+            </td>
+            <td>Royal George</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1321" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              123 Regent Avenue West<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=123 Regent Avenue West, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1320">
+            <td class="artists">
+              
+                
+              
+                The New Faves<br>
+              
+            </td>
+            <td>Red Cactus Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1320" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              691 Corydon Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=691 Corydon Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1323">
+            <td class="artists">
+              
+                
+              
+                Open Mic<br>
+              
+            </td>
+            <td>Le Garage Cafe</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1323" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              166 Provencher Blvd<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=166 Provencher Blvd, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1324">
+            <td class="artists">
+              
+                
+              
+                In Back Series<br>
+              
+                Chris Carmichael<br>
+              
+                The F-Holes<br>
+              
+                Matt Foster<br>
+              
+            </td>
+            <td>Times Change(d) High & Lonesome Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-15T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1324" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              234 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=234 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Wednesday
+        </h1>
+        <p class="muted pull-right lead">Jan 16</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1325">
+            <td class="artists">
+              
+                
+              
+                Songwriter Explosion<br>
+              
+                Dan Frechette<br>
+              
+                Tom Dunlop<br>
+              
+                Amber Nielson<br>
+              
+                Kerri Stephens<br>
+              
+                Pierre Freynet<br>
+              
+            </td>
+            <td>555 Osborne</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T19:00:00-06:00">
+                 7 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1325" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $7.00
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1326">
+            <td class="artists">
+              
+                
+              
+                Blue Rodeo<br>
+              
+            </td>
+            <td>MTS Centre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T19:30:00-06:00">
+                 7 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1326" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              260 Hargrave Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=260 Hargrave Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1327">
+            <td class="artists">
+              
+                
+              
+                Highway Men<br>
+              
+            </td>
+            <td>McPhillips Station Casino</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1327" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              484 McPhillips Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=484 McPhillips Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1328">
+            <td class="artists">
+              
+                
+              
+                Tin Can Bandits CD Release<br>
+              
+                Beth Hamilton<br>
+              
+                Eva Klassen (eifje)<br>
+              
+                Mikayla Zacharias<br>
+              
+                Tin Can Bandits<br>
+              
+            </td>
+            <td>Park Theatre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1328" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              698 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $10.00
+              <br>Advance - $10.00
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=698 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1329">
+            <td class="artists">
+              
+                
+              
+                New Music Wednesdays<br>
+              
+                Hana Lu Lu<br>
+              
+                Somebody Language<br>
+              
+                The Blisters<br>
+              
+            </td>
+            <td>Ozzy's</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1329" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              160 Osborne Street South<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $3.00
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=160 Osborne Street South, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1330">
+            <td class="artists">
+              
+                
+              
+                Chris Carmichael<br>
+              
+            </td>
+            <td>Shannon's Irish Pub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1330" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              175 Carlton Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=175 Carlton Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1331">
+            <td class="artists">
+              
+                
+              
+                Curtis Newton<br>
+              
+            </td>
+            <td>4Play Sport Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1331" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              323 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=323 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1332">
+            <td class="artists">
+              
+                
+              
+                Vinyl Pick Mix Night<br>
+              
+            </td>
+            <td>Five Fifty Five</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1332" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 South Osborne<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 South Osborne, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1333">
+            <td class="artists">
+              
+                
+              
+                Pierre Freynet and Friends<br>
+              
+            </td>
+            <td>Le Garage Cafe</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1333" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              166 Provencher Blvd<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=166 Provencher Blvd, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1334">
+            <td class="artists">
+              
+                
+              
+                Haunter<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1334" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1335">
+            <td class="artists">
+              
+                
+              
+                Jam Night<br>
+              
+                Sassy Jack<br>
+              
+            </td>
+            <td>Royal George</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1335" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              123 Regent Avenue West<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=123 Regent Avenue West, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1336">
+            <td class="artists">
+              
+                
+              
+                Chris Froome<br>
+              
+            </td>
+            <td>The Loft Gastropub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1336" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              774 Corydon Avenue<br>Winnipeg<br>Manitoba
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=774 Corydon Avenue, Winnipeg, Manitoba&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1337">
+            <td class="artists">
+              
+                
+              
+                Ashlee Bart<br>
+              
+            </td>
+            <td>Joe Black Coffee Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-16T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1337" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              2037 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=2037 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Thursday
+        </h1>
+        <p class="muted pull-right lead">Jan 17</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1338">
+            <td class="artists">
+              
+                
+              
+                Skywalk Concert<br>
+              
+                Dan Scholz<br>
+              
+                Winnipeg Youth Orchestra<br>
+              
+            </td>
+            <td>Carol Shields Audiorium, Millenium Library</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T12:00:00-06:00">
+                12 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1338" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              Donald Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=Donald Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1339">
+            <td class="artists">
+              
+                
+              
+                Acoustic Jam<br>
+              
+                Leo & Friends<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T18:30:00-06:00">
+                 6 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1339" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1340">
+            <td class="artists">
+              
+                
+              
+                Marsh and Greg<br>
+              
+            </td>
+            <td>Sam's Place</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T19:30:00-06:00">
+                 7 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1340" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              159 Henderson Highway<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=159 Henderson Highway, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1343">
+            <td class="artists">
+              
+                
+              
+                Jam Night<br>
+              
+                Route 59<br>
+              
+            </td>
+            <td>Cavern</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1343" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              112 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=112 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1344">
+            <td class="artists">
+              
+                
+              
+                DJ Hallmark<br>
+              
+            </td>
+            <td>Five Fifty Five</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1344" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Osborne<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Osborne, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1346">
+            <td class="artists">
+              
+                
+              
+                Leanne Pearson<br>
+              
+            </td>
+            <td>4Play Sports Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1346" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              323 Portage Ave.<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=323 Portage Ave., Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1347">
+            <td class="artists">
+              
+                
+              
+                The Blue Martini Band<br>
+              
+            </td>
+            <td>Pony Corral Downtown</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1347" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              444 St. Mary Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=444 St. Mary Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1348">
+            <td class="artists">
+              
+                
+              
+                The Remarkables<br>
+              
+            </td>
+            <td>Red Cactus Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1348" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              691 Corydon Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=691 Corydon Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1349">
+            <td class="artists">
+              
+                
+              
+                The Lucas Sader Project<br>
+              
+            </td>
+            <td>Arkadash Bistro & Lounge</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1349" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              268 Portage Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=268 Portage Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1350">
+            <td class="artists">
+              
+                
+              
+                Maxine Peters<br>
+              
+            </td>
+            <td>Double Decker Tavern</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1350" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              943 Rosser Avenue<br>Brandon
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=943 Rosser Avenue, Brandon&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1351">
+            <td class="artists">
+              
+                
+              
+                Double CD Release: Rob Vaarmeyer and Bobby Stahr<br>
+              
+                Ainsley Friesen<br>
+              
+                Bobby Stahr<br>
+              
+                Haley Carr<br>
+              
+                Rob Vaarmeyer<br>
+              
+            </td>
+            <td>Park Theatre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1351" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              698 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $15.00
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=698 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1345">
+            <td class="artists">
+              
+                
+              
+                Bobby the Coach Lowen<br>
+              
+                DJ Tec-G<br>
+              
+            </td>
+            <td>Tijuana Yacht Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1345" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              Canad Inns - Polo Park<br>1405 St. Matthews Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=Canad Inns - Polo Park, 1405 St. Matthews Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1341">
+            <td class="artists">
+              
+                
+              
+                Jam Night<br>
+              
+            </td>
+            <td>Belgian Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1341" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              407 Provencher Boulevard<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=407 Provencher Boulevard, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1342">
+            <td class="artists">
+              
+                
+              
+                Scoots McTavish<br>
+              
+            </td>
+            <td>Shannon's Irish Pub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1342" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              175 Carlton Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=175 Carlton Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1352">
+            <td class="artists">
+              
+                
+              
+                Rock n Roll Draft Night<br>
+              
+                The Hoots<br>
+              
+                The Bad Nerves<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1352" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1353">
+            <td class="artists">
+              
+                
+              
+                The Service<br>
+              
+            </td>
+            <td>Palomino Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1353" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1133 Portage Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1133 Portage Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1354">
+            <td class="artists">
+              
+                
+              
+                Slow Motion Walter<br>
+              
+            </td>
+            <td>Royal George</td>
+            <td class="time">
+              
+              <time datetime="2013-01-17T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1354" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              123 Regent Avenue West<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=123 Regent Avenue West, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Friday
+        </h1>
+        <p class="muted pull-right lead">Jan 18</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1355">
+            <td class="artists">
+              
+                
+              
+                Matinee Series<br>
+              
+                Winnipeg Symphony Orchestra<br>
+              
+            </td>
+            <td>Centennial Concert Hall</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T10:30:00-06:00">
+                10 AM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1355" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $20.00
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1356">
+            <td class="artists">
+              
+                
+              
+                Dylan Murray<br>
+              
+                Jessica Tyler<br>
+              
+                Nelly Furtado<br>
+              
+            </td>
+            <td>MTS Centre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T19:30:00-06:00">
+                 7 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1356" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              260 Hargrave Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=260 Hargrave Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1357">
+            <td class="artists">
+              
+                
+              
+                Open Mic at The Folk Exchange<br>
+              
+                Les Surveillantes<br>
+              
+            </td>
+            <td>The Folk Exchange</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T19:30:00-06:00">
+                 7 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1357" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              203-211 Bannatyne Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $2.00
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=203-211 Bannatyne Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1375">
+            <td class="artists">
+              
+                
+              
+                DJ Massive<br>
+              
+                Spazz<br>
+              
+            </td>
+            <td>Level Two Niteclub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1375" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              575 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=575 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1368">
+            <td class="artists">
+              
+                
+              
+                Les Sexy Album Release<br>
+              
+                Les Sexy<br>
+              
+            </td>
+            <td>West End Cultural Centre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1368" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              586 Ellice Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=586 Ellice Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1369">
+            <td class="artists">
+              
+                
+              
+                They Say<br>
+              
+            </td>
+            <td>The Zoo</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1369" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              160 Osborne Street South<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=160 Osborne Street South, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1370">
+            <td class="artists">
+              
+                
+              
+                Crowdust<br>
+              
+            </td>
+            <td>Ozzy's</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1370" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              160 Osborne Street South<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=160 Osborne Street South, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1371">
+            <td class="artists">
+              
+                
+              
+                Mama Cutsworth<br>
+              
+                DJ Dryhump<br>
+              
+                The Barrelhouse<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1371" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1372">
+            <td class="artists">
+              
+                
+              
+                Mercy Mercy<br>
+              
+            </td>
+            <td>Prairie Ink Grant Park</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1372" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              McNally Robinson Grant Park<br>1120 Grant Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=McNally Robinson Grant Park, 1120 Grant Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1373">
+            <td class="artists">
+              
+                
+              
+                Atomically<br>
+              
+                Valentino's<br>
+              
+            </td>
+            <td>LA Roadhouse</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1373" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1105 Arlington<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1105 Arlington, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1376">
+            <td class="artists">
+              
+                
+              
+                DJ Special K<br>
+              
+                Orbit X<br>
+              
+            </td>
+            <td>The Oak</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1376" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              826 Regent Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=826 Regent Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1374">
+            <td class="artists">
+              
+                
+              
+                Cry Baby<br>
+              
+            </td>
+            <td>Blue Dolphin Lounge  - South Beach Casino</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1374" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1 Ocean Drive<br>Scanterbury
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1 Ocean Drive, Scanterbury&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1358">
+            <td class="artists">
+              
+                
+              
+                DJ Heavy<br>
+              
+            </td>
+            <td>Tijuana Yacht Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1358" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              Canad Inns - Polo Park<br>1405 St. Matthews Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=Canad Inns - Polo Park, 1405 St. Matthews Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1359">
+            <td class="artists">
+              
+                
+              
+                Mike and the Eastwood Gang<br>
+              
+            </td>
+            <td>Pony Corral Grant Park</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1359" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              400 Wilton Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=400 Wilton Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1360">
+            <td class="artists">
+              
+                
+              
+                Groovetime in the Neighbourhood<br>
+              
+            </td>
+            <td>The Neighbourhood Bookstore & Cafe</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1360" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              898 Westminster Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=898 Westminster Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1361">
+            <td class="artists">
+              
+                
+              
+                Celilia String Quartet<br>
+              
+                Georgy Tchaidze<br>
+              
+            </td>
+            <td>Pinawa Community Centre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1361" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              Pinawa<br>Manitoba
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=Pinawa, Manitoba&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1362">
+            <td class="artists">
+              
+                
+              
+                The Shoulds<br>
+              
+                Todd Hunter Band<br>
+              
+            </td>
+            <td>Shannon's Irish Pub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1362" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              175 Carlton Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=175 Carlton Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1363">
+            <td class="artists">
+              
+                
+              
+                Electric Kitten<br>
+              
+                JD Francis<br>
+              
+                Tec G<br>
+              
+            </td>
+            <td>Area Nightclub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1363" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1792 Pembina Highway<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1792 Pembina Highway, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1364">
+            <td class="artists">
+              
+                
+              
+                Maxine Peters<br>
+              
+            </td>
+            <td>Double Decker Tavern</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1364" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              943 Rosser Avenue<br>Brandon
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=943 Rosser Avenue, Brandon&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1365">
+            <td class="artists">
+              
+                
+              
+                Winnipeg Symphony Orchestra<br>
+              
+                Nobuykui Tsujii<br>
+              
+            </td>
+            <td>Centennial Concert Hall</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1365" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1366">
+            <td class="artists">
+              
+                
+              
+                Imaginary Cities<br>
+              
+                The Young Pixels<br>
+              
+            </td>
+            <td>Watson Art Centre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1366" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              104 - 1st Avenue N.W.<br>Dauphin
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=104 - 1st Avenue N.W., Dauphin&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1367">
+            <td class="artists">
+              
+                
+              
+                Gulf of Brass<br>
+              
+            </td>
+            <td>Doubles Fun Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1367" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              20 Alpine<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=20 Alpine, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1380">
+            <td class="artists">
+              
+                
+              
+                Victor Hugo Lopez<br>
+              
+            </td>
+            <td>Current Lounge</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1380" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              75 Forks Market Road<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=75 Forks Market Road, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1381">
+            <td class="artists">
+              
+                
+              
+                Beaker Bash<br>
+              
+                Catz Tatz<br>
+              
+                Xercuits<br>
+              
+            </td>
+            <td>Pyramid Cabaret</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1381" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              176 Fort Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $15.00
+              <br>Advance - $10.00
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=176 Fort Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1377">
+            <td class="artists">
+              
+                
+              
+                Caraballo<br>
+              
+            </td>
+            <td>Upperdeck Sports Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1377" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              484 McPhillips St<br>McPhillips Station Casino<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=484 McPhillips St, McPhillips Station Casino, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1378">
+            <td class="artists">
+              
+                
+              
+                Slingshot Duo<br>
+              
+            </td>
+            <td>Toukie's Lounge</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1378" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1425 Regent Avenue West<br>Winnipeg 
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1425 Regent Avenue West, Winnipeg &size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1379">
+            <td class="artists">
+              
+                
+              
+                The Service<br>
+              
+            </td>
+            <td>Palomino Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1379" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1133 Portage Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1133 Portage Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1382">
+            <td class="artists">
+              
+                
+              
+                Wallace<br>
+              
+                 Creasey and Gardner<br>
+              
+            </td>
+            <td>Highway 75 Blues & Sports Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T21:30:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1382" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1011 Pembina Highway<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1011 Pembina Highway, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1383">
+            <td class="artists">
+              
+                
+              
+                Reel Brew<br>
+              
+            </td>
+            <td>King's Head Pub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1383" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              120 King Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=120 King Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1384">
+            <td class="artists">
+              
+                
+              
+                Ras-Tamils<br>
+              
+                The Noble Thiefs<br>
+              
+            </td>
+            <td>Times Change(d) High & Lonesome Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-18T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1384" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              234 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=234 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Saturday
+        </h1>
+        <p class="muted pull-right lead">Jan 19</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1385">
+            <td class="artists">
+              
+                
+              
+                Blues Jam<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T15:00:00-06:00">
+                 3 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1385" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1386">
+            <td class="artists">
+              
+                
+              
+                The McMahon/Larsson Group<br>
+              
+            </td>
+            <td>Highway 75 Blues & Sports Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T15:00:00-06:00">
+                 3 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1386" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1011 Pembina Highway<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1011 Pembina Highway, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1387">
+            <td class="artists">
+              
+                
+              
+                Winnipeg Symphony Orchestra<br>
+              
+                Nobuykui Tsujii<br>
+              
+            </td>
+            <td>Centennial Concert Hall</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1387" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1388">
+            <td class="artists">
+              
+                
+              
+                Bob Watts Trio<br>
+              
+            </td>
+            <td>Prairie Ink Grant Park</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1388" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              McNally Robinson Grant Park<br>1120 Grant Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=McNally Robinson Grant Park, 1120 Grant Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1389">
+            <td class="artists">
+              
+                
+              
+                Dust Adam Dust<br>
+              
+                Gaff & The Slasher<br>
+              
+                Mobina Galore<br>
+              
+            </td>
+            <td>Cavern</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1389" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              112 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=112 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1390">
+            <td class="artists">
+              
+                
+              
+                Sabbatory<br>
+              
+                Solanum<br>
+              
+                Zombie Assault<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1390" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1391">
+            <td class="artists">
+              
+                
+              
+                The Main Street Exile<br>
+              
+            </td>
+            <td>Shannon's Irish Pub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1391" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              175 Carlton Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=175 Carlton Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1392">
+            <td class="artists">
+              
+                
+              
+                Atomically<br>
+              
+                Valentino's<br>
+              
+            </td>
+            <td>LA Roadhouse</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1392" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1105 Arlington<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1105 Arlington, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1393">
+            <td class="artists">
+              
+                
+              
+                Cry Baby<br>
+              
+            </td>
+            <td>Blue Dolphin Lounge  - South Beach Casino</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1393" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1 Ocean Drive<br>Scanterbury
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1 Ocean Drive, Scanterbury&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1394">
+            <td class="artists">
+              
+                
+              
+                DJ Keesh<br>
+              
+            </td>
+            <td>Aura Nightclub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1394" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              575 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=575 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1395">
+            <td class="artists">
+              
+                
+              
+                DJ Hollywood Hype<br>
+              
+                DJ Tec G<br>
+              
+            </td>
+            <td>Stereo</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1395" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              Canad Inns Destination Centre Windsor Park<br>1034 Elizabeth Road (Lagimodiere &amp; Elizabeth)<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=Canad Inns Destination Centre Windsor Park, 1034 Elizabeth Road (Lagimodiere &amp; Elizabeth), Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1396">
+            <td class="artists">
+              
+                
+              
+                3Slickz<br>
+              
+                DJ Patelli<br>
+              
+                MC Escalade<br>
+              
+            </td>
+            <td>Tijuana Yacht Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1396" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              Canad Inns - Polo Park<br>1405 St. Matthews Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=Canad Inns - Polo Park, 1405 St. Matthews Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1397">
+            <td class="artists">
+              
+                
+              
+                Mike and the Eastwood Gang<br>
+              
+            </td>
+            <td>Pony Corral Grant Park</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1397" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              400 Wilton Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=400 Wilton Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1398">
+            <td class="artists">
+              
+                
+              
+                Ingrid Johnson<br>
+              
+            </td>
+            <td>Joe Black Coffee Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1398" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              2037 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=2037 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1399">
+            <td class="artists">
+              
+                
+              
+                Gary P Album Release Concert<br>
+              
+                Gary Procyshyn<br>
+              
+            </td>
+            <td>Park Theatre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T20:30:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1399" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              698 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $10.00
+              <br>Advance - $10.00
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=698 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1400">
+            <td class="artists">
+              
+                
+              
+                Caraballo<br>
+              
+            </td>
+            <td>Upperdeck Sports Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1400" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              484 McPhillips St<br>McPhillips Station Casino<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=484 McPhillips St, McPhillips Station Casino, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1401">
+            <td class="artists">
+              
+                
+              
+                Slingshot Duo<br>
+              
+            </td>
+            <td>Toukie's Lounge</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1401" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1425 Regent Avenue West<br>Winnipeg 
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1425 Regent Avenue West, Winnipeg &size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1402">
+            <td class="artists">
+              
+                
+              
+                The Service<br>
+              
+            </td>
+            <td>Palomino Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1402" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1133 Portage Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1133 Portage Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1403">
+            <td class="artists">
+              
+                
+              
+                The Revival<br>
+              
+                Whole Lotta Angus<br>
+              
+            </td>
+            <td>The Oak</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1403" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              826 Regent Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $5.00
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=826 Regent Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1404">
+            <td class="artists">
+              
+                
+              
+                Victor Hugo Lopez<br>
+              
+            </td>
+            <td>Current Lounge</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1404" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              75 Forks Market Road<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=75 Forks Market Road, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1405">
+            <td class="artists">
+              
+                
+              
+                Wallace<br>
+              
+                 Creasey and Gardner<br>
+              
+            </td>
+            <td>Highway 75 Blues & Sports Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T21:30:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1405" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1011 Pembina Highway<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1011 Pembina Highway, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1406">
+            <td class="artists">
+              
+                
+              
+                The Bros. Landreth<br>
+              
+                Rosalyn Dennett<br>
+              
+            </td>
+            <td>Times Change(d) High & Lonesome Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T21:30:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1406" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              234 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $10.00
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=234 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1407">
+            <td class="artists">
+              
+                
+              
+                Oh So Popular<br>
+              
+            </td>
+            <td>King's Head Pub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1407" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              120 King Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=120 King Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1408">
+            <td class="artists">
+              
+                
+              
+                Surviving Winter<br>
+              
+                Lost Weekend<br>
+              
+                Moses Mayes<br>
+              
+            </td>
+            <td>Pyramid Cabaret</td>
+            <td class="time">
+              
+              <time datetime="2013-01-19T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1408" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              176 Fort Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $15.00
+              <br>Advance - $12.50
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=176 Fort Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Sunday
+        </h1>
+        <p class="muted pull-right lead">Jan 20</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1409">
+            <td class="artists">
+              
+                
+              
+                Soul on Ice<br>
+              
+                DJ Hunnicutt<br>
+              
+                DJ Co-op<br>
+              
+            </td>
+            <td>Canopy Skating Rink</td>
+            <td class="time">
+              
+              <time datetime="2013-01-20T14:00:00-06:00">
+                 2 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1409" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              The Forks<br>Winnipeg<br>Manitoba
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=The Forks, Winnipeg, Manitoba&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1410">
+            <td class="artists">
+              
+                
+              
+                Nobuyuki Tsujii<br>
+              
+            </td>
+            <td>Eckhardt-Gramatté Hall</td>
+            <td class="time">
+              
+              <time datetime="2013-01-20T15:00:00-06:00">
+                 3 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1410" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              University of Winnipeg<br>515 Portage Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=University of Winnipeg, 515 Portage Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1411">
+            <td class="artists">
+              
+                
+              
+                Kelly B<br>
+              
+                Maxine Peters<br>
+              
+                Mobina Galore<br>
+              
+                Ryan Van Belleghem<br>
+              
+                Termanill<br>
+              
+                Brent Alarie<br>
+              
+            </td>
+            <td>Park Theatre</td>
+            <td class="time">
+              
+              <time datetime="2013-01-20T19:00:00-06:00">
+                 7 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1411" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              698 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              <br>Door - $12.00
+              <br>Advance - $9.65
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=698 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1412">
+            <td class="artists">
+              
+                
+              
+                Jam<br>
+              
+                Big Dave McLean<br>
+              
+            </td>
+            <td>Times Change(d) High & Lonesome Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-20T21:30:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1412" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              234 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=234 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1413">
+            <td class="artists">
+              
+                
+              
+                All the King's Men<br>
+              
+            </td>
+            <td>King's Head Pub</td>
+            <td class="time">
+              
+              <time datetime="2013-01-20T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1413" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              120 King Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=120 King Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Monday
+        </h1>
+        <p class="muted pull-right lead">Jan 21</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1414">
+            <td class="artists">
+              
+                
+              
+                The Sawatteam<br>
+              
+            </td>
+            <td>Five Fifty Five</td>
+            <td class="time">
+              
+              <time datetime="2013-01-21T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1414" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Osborne<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Osborne, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1415">
+            <td class="artists">
+              
+                
+              
+                All Time Low<br>
+              
+                Fireworks<br>
+              
+                Yellowcard<br>
+              
+            </td>
+            <td>Burton Cummings Theatre for the Performing Arts</td>
+            <td class="time">
+              
+              <time datetime="2013-01-21T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1415" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              364 Smith Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=364 Smith Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1416">
+            <td class="artists">
+              
+                
+              
+                Open Mic Mondays<br>
+              
+                Lindsey White<br>
+              
+                Scott McNabb<br>
+              
+            </td>
+            <td>Club 60 A.N.A.F.</td>
+            <td class="time">
+              
+              <time datetime="2013-01-21T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1416" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              3-433 River Ave.<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=3-433 River Ave., Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1417">
+            <td class="artists">
+              
+                
+              
+                Motown Night<br>
+              
+            </td>
+            <td>Juss Jazz</td>
+            <td class="time">
+              
+              <time datetime="2013-01-21T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1417" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              240 Portage Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=240 Portage Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1418">
+            <td class="artists">
+              
+                
+              
+                Viridians<br>
+              
+                Grand Master<br>
+              
+                Into Eternity<br>
+              
+                Revista<br>
+              
+            </td>
+            <td>The Zoo</td>
+            <td class="time">
+              
+              <time datetime="2013-01-21T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1418" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              160 Osborne Street South<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              
+              
+              <br>Advance - $12.00
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=160 Osborne Street South, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1419">
+            <td class="artists">
+              
+                
+              
+                Open Mic<br>
+              
+            </td>
+            <td>Dick's Dylan's</td>
+            <td class="time">
+              
+              <time datetime="2013-01-21T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1419" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              2609 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=2609 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1420">
+            <td class="artists">
+              
+                
+              
+                Johnni Splash<br>
+              
+            </td>
+            <td>Palomino Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-21T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1420" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              1133 Portage Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=1133 Portage Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          
+          Tuesday
+        </h1>
+        <p class="muted pull-right lead">Jan 22</p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          
+          <tr class="concert colored" data-id="#1421">
+            <td class="artists">
+              
+                
+              
+                Curtis Newton<br>
+              
+            </td>
+            <td>Silver Heights Restaurant and Lounge</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1421" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              2169 Portage Ave<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=2169 Portage Ave, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1422">
+            <td class="artists">
+              
+                
+              
+                Tim Butler<br>
+              
+            </td>
+            <td>Windsor Hotel</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1422" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              187 Garry Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=187 Garry Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1423">
+            <td class="artists">
+              
+                
+              
+                Soul Nite<br>
+              
+                Dr. Hotbottom & The Soul Rx<br>
+              
+            </td>
+            <td>Cavern</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1423" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              112 Osborne Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=112 Osborne Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1424">
+            <td class="artists">
+              
+                
+              
+                DJ Blimey Boy<br>
+              
+                Johnny Lektrik<br>
+              
+                Pop Tart<br>
+              
+            </td>
+            <td>Five Fifty Five</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1424" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              555 Osborne<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=555 Osborne, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1425">
+            <td class="artists">
+              
+                
+              
+                The New Faves<br>
+              
+            </td>
+            <td>Red Cactus Bar</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1425" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              691 Corydon Avenue<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=691 Corydon Avenue, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1426">
+            <td class="artists">
+              
+                
+              
+                Jam Night<br>
+              
+                Transcona Troubadours<br>
+              
+            </td>
+            <td>Royal George</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T20:00:00-06:00">
+                 8 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1426" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              123 Regent Avenue West<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=123 Regent Avenue West, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert colored" data-id="#1427">
+            <td class="artists">
+              
+                
+              
+                Open Mic<br>
+              
+            </td>
+            <td>Le Garage Cafe</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T21:00:00-06:00">
+                 9 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1427" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              166 Provencher Blvd<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=166 Provencher Blvd, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+          <tr class="concert " data-id="#1428">
+            <td class="artists">
+              
+                
+              
+                In Back Series<br>
+              
+                Scott Nolan<br>
+              
+                The F-Holes<br>
+              
+                Jay Nowicki<br>
+              
+            </td>
+            <td>Times Change(d) High & Lonesome Club</td>
+            <td class="time">
+              
+              <time datetime="2013-01-22T22:00:00-06:00">
+                10 PM
+              </time>
+            </td>
+          </tr>
+
+          <div id="1428" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              234 Main Street<br>Winnipeg
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <br>FREE
+              
+              
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=234 Main Street, Winnipeg&size=480x200&sensor=false">
+          </div>
+
+          
+          
+
+        </tbody>
+      </table>
+
+      
+
+      <! ==============================-->
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Michael Thiessen 2013, built with <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>, <a href="">Sinatra</a>, and <a href="">Heroku</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/custom.js"></script>
+
+    <link href="/assets/css/site-specific.css" rel="stylesheet">
+
+  </body>
+</html>

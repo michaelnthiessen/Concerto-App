@@ -40,7 +40,7 @@
 
       .popover {
         width: 500px;
-        min-height: 370px;
+        min-height: 350px;
       }
 
       tbody tr {
@@ -92,20 +92,6 @@
 
       .concert {
         font-weight: 300;
-      }`
-
-      h3.title a{
-        color: #999;
-      }
-
-      a.title-link:hover{
-        text-decoration: none;
-        color: #666;
-      }
-
-      .close-popover:hover {
-        cursor: hand;
-        cursor: pointer;
       }
 
     </style>
@@ -135,97 +121,48 @@
           <li><a href="#">FAQ</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="title"><a href="/" class='title-link'>Concerto</a></h3>
+        <h3 class="muted">Concerto</h3>
       </div>
 
       <hr>
 
-      <div class="jumbotron">
-        <h1>Introducing<br>Concerto,</h1>
-        <p class="lead">A new way to find local concerts in Manitoba</p>
-        <br>
-        <a class="btn btn-large btn-primary" id="bigbutton" href="/addconcert">Add your own concert listing</a>
-      </div>
-
-      <br>
-
-      <div class="navbar">
-        <div class="navbar-inner">
-          <ul class="nav">
-            <li <%= 'class="active"' if @displayMode == 'Today' %>><a href="/">Today</a></li>
-            <li <%= 'class="active"' if @displayMode == 'Tomorrow' %>><a href="/tomorrow">Tomorrow</a></li>
-            <li><a href="/nextWeek">Next Week</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!--
-      <div class="alert alert-success">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Did you know?</strong> If you click on a concert, you can view details about it
-      </div>
-      -->
-
-      <br>
-
-      <div class="date-title pull-right">
-        <h1><%= @displayMode %></h1>
-        <p class="muted pull-right lead"><%= @currentDay %></p>
-      </div>
-
-      <! ======== List of concerts =======-->
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Artists</th>
-            <th>Venue</th>
-            <th class="time">Time</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <% count = 0 %>
-          <%  @concertList.each do |concert| %>
-          <tr class="concert <%= 'colored' if (count % 2) == 0 %>" data-id="#<%= concert[:id] %>">
-            <td class="artists">
-              <% toPrint = '' %>
-              <% concert[:artists].split(',').each do |artist| %>
-                <% toPrint << artist + "<br>" if artist.length > 0%>
-              <% end %>
-              <%= toPrint %>
-            </td>
-            <td><%= concert[:venue] %></td>
-            <td class="time">
-              <% date = DateTime.strptime(concert[:date], "%FT%H:%M:%S%:z") %>
-              <time datetime="<%= concert[:date] %>">
-                <%= date.strftime("%l %p")%>
-              </time>
-            </td>
-          </tr>
-
-          <div id="<%= concert[:id] %>" class="detail-container">
-            <p class="address">
-              Address
-              <br>
-              <%= concert[:address].gsub(", ", "<br>") %>
-            </p>
-            <p class="pull-right admission">
-              Admission
-              <%= '<br>FREE' if concert[:door] == 0 && concert[:advance] == 0 %>
-              <%= sprintf("<br>Door - $%.2f", concert[:door]) if concert[:door] != 0 %>
-              <%= sprintf("<br>Advance - $%.2f", concert[:advance]) if concert[:advance] != 0 %>
-              <br>
-            </p>
-            <img class="img-rounded img-bordered" src="http://maps.googleapis.com/maps/api/staticmap?markers=<%=concert[:address] %>&size=480x200&sensor=false">
+      <div class="">
+        <form class='form-horizontal'>
+          <div class="control-group">
+            <label class='control-label' for='inputTitle'>Title</label>
+            <div class='controls'>
+              <input id='inputTitle' class="span3" type='text' placeholder="My Awesome Concert">
+              <span class='help-inline'> *Not required </span>
+            </div>
           </div>
-          <% count += 1 %>
-          <% end %>
+          <div class="control-group">
+            <label class='control-label' for='inputDate'>Date</label>
+            <div class='controls'>
+              <input id='inputDate' class="span3" type='text' placeholder="02/12/2013">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class='control-label' for='inputTime'>Time</label>
+            <div class='controls'>
+              <input id='inputTime' class="span3" type='text' placeholder="8:30 AM">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class='control-label' for='inputVenue'>Venue</label>
+            <div class='controls'>
+              <input id='inputVenue' class="span3" type='text' placeholder="Concert Hall">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class='control-label' for='inputStre'>Address</label>
+            <div class='controls'>
+              <input id='inputAddress' class="span3" type='text' placeholder="">
+            </div>
+          </div>
+        </form>
+      </div>
 
-        </tbody>
-      </table>
-
-      <! ==============================-->
+      <br>
 
       <hr>
 
@@ -242,8 +179,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.js"></script>
     <script src="/assets/js/custom.js"></script>
-
-    <link href="/assets/css/site-specific.css" rel="stylesheet">
 
   </body>
 </html>

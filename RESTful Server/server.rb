@@ -89,7 +89,7 @@ get '/nextWeek' do
 		beginDate = (Date.today + i)
 
 		# concerts = @database.from(:concerts).where(:date => beginDate..(beginDate + 1)).order(:date)
-		concerts = @database.from(:concerts).where(:date => /#{beginDate.to_s}.*/)
+		concerts = @database.from(:concerts).where(:date => /#{beginDate.to_s}.*/).order(:date)
 
 		# Add to the list if there are some concerts
 		if concerts.count > 0
@@ -101,6 +101,12 @@ get '/nextWeek' do
 	end
 
 	erb :nextWeek
+
+end
+
+get '/addconcert' do
+
+	erb :addconcert
 
 end
 

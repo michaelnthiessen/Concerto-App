@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Concerto - <%= @displayMode %></title>
+    <title>Concerto - Next Week</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Michael Thiessen">
@@ -40,7 +40,7 @@
 
       .popover {
         width: 500px;
-        height: 350px;
+        height: 370px;
       }
 
       tbody tr {
@@ -76,9 +76,22 @@
       }
 
       .detail-container {
+        font-weight: 300;
         overflow: auto;
         width: 100%;
         display: none;
+      }
+
+      .address:first-line, .admission:first-line {
+        font-weight: 500;
+      }
+
+      td.artists:first-line {
+        font-weight: 500;
+      }
+
+      .concert {
+        font-weight: 300;
       }
 
     </style>
@@ -117,7 +130,7 @@
         <h1>Introducing<br>Concerto,</h1>
         <p class="lead">A new way to find local concerts in Manitoba</p>
         <br>
-        <a class="btn btn-large btn-primary" id="bigbutton" href="#">Add your own concert</a>
+        <a class="btn btn-large btn-primary" id="bigbutton" href="/addconcert">Add your own concert listing</a>
       </div>
 
       <br>
@@ -167,28 +180,28 @@
           <% count = 0 %>
           <%  day.each do |concert| %>
           <tr class="concert <%= 'colored' if (count % 2) == 0 %>" data-id="#<%= concert[:id] %>">
-            <td>
+            <td class="artists">
               <% concert[:artists].split(',').each do |artist| %>
                 <%= artist + "<br>" if artist.length > 0%>
               <% end %>
             </td>
             <td><%= concert[:venue] %></td>
-            <td style="white-space:nowrap;">
+            <td class="time">
               <% date = DateTime.strptime(concert[:date], "%FT%H:%M:%S%:z") %>
               <time datetime="<%= concert[:date] %>">
-                <%= date.strftime("%F %l %p")%>
+                <%= date.strftime("%l %p")%>
               </time>
             </td>
           </tr>
 
           <div id="<%= concert[:id] %>" class="detail-container">
             <p class="address">
-              <b>Address</b>
+              Address
               <br>
               <%= concert[:address].gsub(", ", "<br>") %>
             </p>
             <p class="pull-right admission">
-              <b>Admission</b>
+              Admission
               <%= '<br>FREE' if concert[:door] == 0 && concert[:advance] == 0 %>
               <%= sprintf("<br>Door - $%.2f", concert[:door]) if concert[:door] != 0 %>
               <%= sprintf("<br>Advance - $%.2f", concert[:advance]) if concert[:advance] != 0 %>
