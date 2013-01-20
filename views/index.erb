@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Concerto - A new way to find local concerts in Manitoba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Michael Thiessen">
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/assets/css/site-specific.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/assets/ico/favicon.png">
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,
+e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
+
+                                   
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/addconcert">Add a concert listing</a></li>
+        </ul>
+        <h3><a href='/' class="title">Concerto</a></h3>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <h1>Introducing<br>Concerto,</h1>
+        <p class="lead">A new way to find local concerts in Manitoba</p>
+        <br>
+        <a class="btn btn-large btn-primary" id="bigbutton" href="/addconcert">Add your own concert listing</a>
+      </div>
+
+      <br>
+      <hr>
+
+      <%# This is where we need to loop through to write out the concerts for each day %>
+      <% dayNum = 0 %>
+      <% @days.each do |day| %>
+
+      <br>
+
+      <div class="date-title pull-right">
+        <h1>
+          <% date = DateTime.strptime(day.first[:date], "%FT%H:%M:%S%:z") %>
+          <% printDate = date.strftime('%A') %>
+          <% if @pageNum == 1 %>
+            <% printDate = 'Today' if dayNum == 0 %>
+            <% printDate = 'Tomorrow' if dayNum == 1 %>
+          <% end %>
+          <%= printDate %>
+        </h1>
+        <p class="muted pull-right lead"><%= date.strftime('%b %-d') %></p>
+      </div>
+
+      <! ======== List of concerts =======-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Artists</th>
+            <th>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% count = 0 %>
+          <%  day.each do |concert| %>
+          <tr class="concert <%= 'colored' if (count % 2) == 0 %>" data-id="#<%= concert[:id] %>">
+            <td class="artists">
+              <% concert[:artists].split(',').each do |artist| %>
+                <%= artist + "<br>" if artist.length > 0%>
+              <% end %>
+            </td>
+            <td><%= concert[:venue] %></td>
+            <td class="time">
+              <% date = DateTime.strptime(concert[:date], "%FT%H:%M:%S%:z") %>
+              <time datetime="<%= concert[:date] %>">
+                <% printDate = date.strftime("%l %p")%>
+                <% printDate = date.strftime("%l:%M %p") if date.strftime("%M") != '00' %>
+                <%= printDate %>
+              </time>
+            </td>
+          </tr>
+
+          <div id="<%= concert[:id] %>" class="detail-container">
+            <p class="address">
+              Address
+              <br>
+              <%= concert[:address].gsub(", ", "<br>") %>
+            </p>
+            <p class="pull-right admission">
+              Admission
+              <%= '<br>FREE' if concert[:door] == 0 && concert[:advance] == 0 %>
+              <%= sprintf("<br>Door - $%.2f", concert[:door]) if concert[:door] != 0 %>
+              <%= sprintf("<br>Advance - $%.2f", concert[:advance]) if concert[:advance] != 0 %>
+              <br>
+            </p>
+            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=<%=concert[:address] %>&size=480x200&sensor=false">
+          </div>
+
+          <% count += 1 %>
+          <% end %>
+
+        </tbody>
+      </table>
+      <% dayNum += 1 %>
+      <% end %>
+
+      <! ==============================-->
+      <br>
+      <div class="pagination pagination-centered">
+        <ul>
+          <li <%= 'class="disabled"' if @pageNum == 1 %>><a href="/prev/<%= @pageNum %>">«</a></li>
+          <li <%= 'class="active"' if @pageNum == 1 %>><a href="/page/1">1</a></li>
+          <li <%= 'class="active"' if @pageNum == 2 %>><a href="/page/2">2</a></li>
+          <li <%= 'class="active"' if @pageNum == 3 %>><a href="/page/3">3</a></li>
+          <li <%= 'class="active"' if @pageNum == 4 %>><a href="/page/4">4</a></li>
+          <li <%= 'class="active"' if @pageNum == 5 %>><a href="/page/5">5</a></li>
+          <li <%= 'class="active"' if @pageNum == 6 %>><a href="/page/6">6</a></li>
+          <li> <%= 'class="disabled"' if @pageNum == 6 %><a href="/next/<%= @pageNum %>">»</a></li>
+        </ul>
+      </div>
+      <br>
+
+      <div class="footer">
+        <hr>
+        <p class='pull-left'>&copy; Michael Thiessen 2013</p>
+        <p class='pull-right'>Feedback? Suggestions? Email me at <a href="mailto:michael.concerto@gmail.com">michael.concerto@gmail.com</a></p>
+        <br>
+        <br>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/custom.js"></script>
+
+  </body>
+</html>

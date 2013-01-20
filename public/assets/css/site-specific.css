@@ -1,0 +1,98 @@
+tr.active {
+	background-color: #66CC00;
+}
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      .popover {
+        width: 500px;
+        height: 370px;
+      }
+
+      tbody tr {
+        cursor: hand;
+        cursor: pointer;
+      }
+
+      .date-title h1 {
+        margin-bottom: 5px;
+      }
+
+      div.date-title {
+        padding-bottom: 20px;
+      }
+
+      tbody tr.colored td{
+        background-color: #F5F5F5;
+      }
+
+      img.img-rounded {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      p.admission {
+        float: right;
+        text-align: right;
+      }
+
+      p.address {
+        float: left;
+      }
+
+      .detail-container {
+        font-weight: 300;
+        overflow: auto;
+        width: 100%;
+        display: none;
+      }
+
+      .address:first-line, .admission:first-line {
+        font-weight: 500;
+      }
+
+      td.artists:first-line {
+        font-weight: 500;
+      }
+
+      .concert {
+        font-weight: 300;
+      }
+
+      a.title:hover {
+        text-decoration: none;
+        color: #;
+      }
+
+      
+
+
+
+
+
