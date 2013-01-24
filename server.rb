@@ -33,7 +33,7 @@ configure do
 	@@DAYS_PER_PAGE = 5
 
 	# Set up our database
-	@@database = Sequel.connect('postgres://Michael@127.0.0.1:5432/concerts')
+	@@database = Sequel.connect( ENV['DATABASE_URL'] || 'postgres://Michael@127.0.0.1:5432/concerts')
 
 
 end
