@@ -49,6 +49,8 @@ end
 
 get '/page/:pageNum' do
 
+	puts 'woooo'
+
 	# We need to create an array of days, each day holding an array of concerts
 	@days = []
 	@pageNum = params[:pageNum].to_i
