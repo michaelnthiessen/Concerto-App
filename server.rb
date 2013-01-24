@@ -128,6 +128,7 @@ get '/concerts' do
 end
 
 not_found do
+	puts 'something weird happened'
 	erb :error
 end
 
