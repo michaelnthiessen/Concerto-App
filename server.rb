@@ -54,7 +54,8 @@ get '/page/:pageNum' do
 	@pageNum = params[:pageNum].to_i
 
 	# Redirect if not in range
-	if @pageNum < 1 || @pageNum > 6
+	if @pageNum < 1 || @pageNum > 4
+		puts @pageNum
 		halt erb(:error)
 	end
 
@@ -72,6 +73,7 @@ get '/page/:pageNum' do
 		if concerts.count > 0
 			@days << concerts
 		else
+			puts "Not enough concerts"
 			halt erb(:error)
 		end
 

@@ -1,2 +1,2 @@
-require './RESTful\ Server/server'
+require 'server'
 run Sinatra::Application
