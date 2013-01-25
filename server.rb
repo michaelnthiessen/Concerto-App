@@ -133,6 +133,7 @@ not_found do
 end
 
 get '/error' do
+	puts 'There was an error'
 	erb :error
 end
 
