@@ -27,6 +27,8 @@ end
 # Configure our server and do any initialization
 configure do
 
+	puts 'Config!'
+
 	# Set our server to bind to port 127.0.0.1 for testing
 	set :bind, '127.0.0.1'
 
@@ -44,12 +46,13 @@ get '/last_updated' do
 end
 
 get '/' do
+	puts 'You are at the root!'
 	redirect to '/page/1'
 end
 
 get '/page/:pageNum' do
 
-	puts 'woooo'
+	puts 'Serving up a page!'
 
 	# We need to create an array of days, each day holding an array of concerts
 	@days = []
@@ -58,7 +61,7 @@ get '/page/:pageNum' do
 	# Redirect if not in range
 	if @pageNum < 1 || @pageNum > 4
 		puts @pageNum
-		halt erb(:error)
+		redirect to '/error'
 	end
 
 	# We want to get 2..10 days from now
@@ -76,7 +79,7 @@ get '/page/:pageNum' do
 			@days << concerts
 		else
 			puts "Not enough concerts"
-			halt erb(:error)
+			redirect to '/error'
 		end
 
 	end
@@ -128,7 +131,11 @@ get '/concerts' do
 end
 
 not_found do
-	puts 'something weird happened'
+	puts 'ERAWR'
+	redirect to '/error'
+end
+
+get '/error' do
 	erb :error
 end
 
