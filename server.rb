@@ -27,10 +27,8 @@ end
 # Configure our server and do any initialization
 configure do
 
-	puts 'Config!'
-
 	# Set our server to bind to port 127.0.0.1 for testing
-	set :bind, '127.0.0.1'
+	# set :bind, '127.0.0.1'
 
 	@@DAYS_PER_PAGE = 5
 
@@ -131,7 +129,6 @@ get '/concerts' do
 end
 
 not_found do
-	puts 'ERAWR'
 	redirect to '/error'
 end
 
