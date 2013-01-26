@@ -27,19 +27,13 @@ end
 # Configure our server and do any initialization
 configure do
 
-	# Set our server to bind to port 127.0.0.1 for testing
-	# set :bind, '127.0.0.1'
-
 	@@DAYS_PER_PAGE = 5
+
+	$stdout.sync = true;
 
 	# Set up our database
 	@@database = Sequel.connect( ENV['DATABASE_URL'] || 'postgres://Michael@127.0.0.1:5432/concerts')
 
-
-end
-
-# Gets the last time that the database was updated
-get '/last_updated' do
 
 end
 
