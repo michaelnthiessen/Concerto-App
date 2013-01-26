@@ -32,16 +32,13 @@ configure do
 
 	@@DAYS_PER_PAGE = 5
 
+	$stdout.sync = true;
+
 	# Set up our database
 	@@database = Sequel.connect( ENV['DATABASE_URL'] || 'postgres://Michael@127.0.0.1:5432/concerts')
 
 	# Print out which database we connected to
 	puts "Connected to database at #{@@database.uri}"
-
-end
-
-# Gets the last time that the database was updated
-get '/last_updated' do
 
 end
 
