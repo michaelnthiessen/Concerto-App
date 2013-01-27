@@ -39,8 +39,12 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="/">Home</a></li>
+          <!--
           <li><a href="/faq">FAQ</a></li>
+          -->
+          <!--
           <li><a href="/addconcert">Add a concert listing</a></li>
+          -->
         </ul>
         <h3><a href='/' class="title">Concerto</a></h3>
       </div>
@@ -50,10 +54,10 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
       <div class="jumbotron">
         <h1>Introducing<br>Concerto,</h1>
         <p class="lead">A new way to find local concerts in Manitoba</p>
-        <br>
+        <!--
         <a class="btn btn-large btn-primary" id="bigbutton" href="/addconcert">Add your own concert listing</a>
+        -->
       </div>
-
       <br>
       <hr>
 
@@ -135,12 +139,11 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
       <br>
       <div class="pagination pagination-centered">
         <ul>
-          <li <%= 'class="disabled"' if @pageNum == 1 %>><a href="/prev/<%= @pageNum %>">«</a></li>
+          <li <%= 'class="disabled"' if @pageNum == 1 %>><a href='<%= "/prev/#{@pageNum}" if @pageNum != 1 %>'>«</a></li>
           <li <%= 'class="active"' if @pageNum == 1 %>><a href="/page/1">1</a></li>
           <li <%= 'class="active"' if @pageNum == 2 %>><a href="/page/2">2</a></li>
           <li <%= 'class="active"' if @pageNum == 3 %>><a href="/page/3">3</a></li>
-          <li <%= 'class="active"' if @pageNum == 4 %>><a href="/page/4">4</a></li>
-          <li <%= 'class="disabled"' if @pageNum == 4 %>><a href="/next/<%= @pageNum %>">»</a></li>
+          <li <%= 'class="disabled"' if @pageNum == 3 %>><a href='<%= "/next/#{@pageNum}" if @pageNum != 3 %>'>»</a></li>
         </ul>
       </div>
       <br>

@@ -49,15 +49,14 @@ end
 
 get '/page/:pageNum' do
 
-	puts 'Serving up a page!'
-
 	# We need to create an array of days, each day holding an array of concerts
 	@days = []
 	@pageNum = params[:pageNum].to_i
 
+	puts "Serving up page #{@pageNum}"
+
 	# Redirect if not in range
-	if @pageNum < 1 || @pageNum > 4
-		puts @pageNum
+	if @pageNum < 1 || @pageNum > 3
 		redirect to '/error'
 	end
 
@@ -75,12 +74,15 @@ get '/page/:pageNum' do
 		if concerts.count > 0
 			@days << concerts
 		else
-			puts "Not enough concerts"
+			puts "No concerts found to display on page #{@pageNum}"
+			puts "A list of concerts:"
+			puts concerts.all.to_s
 			redirect to '/error'
 		end
 
 	end
 
+	# Display the page
 	erb :index
 
 end
@@ -93,11 +95,11 @@ get '/prev/:pageNum' do
 	redirect to ('/page/' + (params[:pageNum].to_i - 1).to_s)
 end
 
-get '/addconcert' do
+# get '/addconcert' do
 
-	erb :addconcert
+# 	erb :addconcert
 
-end
+# end
 
 # Get data when people add a concert
 put '/addconcert' do
