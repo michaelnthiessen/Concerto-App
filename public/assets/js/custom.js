@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	// Track page views
+	mixpanel.track('Page View');
+
 	// We keep track of the data-id of the currently open popover
 	var currPopoverID = null;
 	var currRow = null;
@@ -41,6 +44,9 @@ $(document).ready(function() {
 			$(this).popover('show');
 			currPopoverID = $(this).attr("data-id");
 			currRow = $(this);
+
+			// Track
+			mixpanel.track('Concert View');
 
 			// Bind our click event
 			$('a.close-popover').click(function(event) {
