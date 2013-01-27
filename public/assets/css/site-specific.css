@@ -47,7 +47,7 @@ tr.active {
         padding-bottom: 20px;
       }
 
-      tbody tr.colored td{
+      tbody tr.colored{
         background-color: #F5F5F5;
       }
 
@@ -90,6 +90,15 @@ tr.active {
         color: #;
       }
 
+      tbody tr.concert:hover, tr.concert.colored:hover {
+        background-color: #909090;
+        color: #F5F5F5;
+      }
+
+      tbody tr.concert.highlight {
+        background-color: #909090;
+        color: #F5F5F5;
+      }
       
 
 

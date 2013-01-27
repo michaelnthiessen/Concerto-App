@@ -61,6 +61,11 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
       <br>
       <hr>
 
+      <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Did you know?!</strong> You can click on the concerts to find out more info!
+      </div>
+
       <%# This is where we need to loop through to write out the concerts for each day %>
       <% dayNum = 0 %>
       <% @days.each do |day| %>
@@ -92,24 +97,40 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
         </thead>
         <tbody>
 
+
+
           <% count = 0 %>
           <%  day.each do |concert| %>
+
           <tr class="concert <%= 'colored' if (count % 2) == 0 %>" data-id="#<%= concert[:id] %>">
             <td class="artists">
+
               <% concert[:artists].split(',').each do |artist| %>
                 <%= artist + "<br>" if artist.length > 0%>
               <% end %>
+
             </td>
-            <td><%= concert[:venue] %></td>
+            <td>
+              <%= concert[:venue] %>
+            </td>
             <td class="time">
+
               <% date = DateTime.strptime(concert[:date], "%FT%H:%M:%S%:z") %>
+
               <time datetime="<%= concert[:date] %>">
+
                 <% printDate = date.strftime("%l %p")%>
                 <% printDate = date.strftime("%l:%M %p") if date.strftime("%M") != '00' %>
                 <%= printDate %>
+                
               </time>
             </td>
           </tr>
+
+
+
+
+
 
           <div id="<%= concert[:id] %>" class="detail-container">
             <p class="address">
