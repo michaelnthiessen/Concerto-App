@@ -19,6 +19,17 @@ $(document).ready(function() {
 
 	});
 
+    $.validator.addMethod('alert', function(value){
+        alert('WHAT>?>');
+    }, 'seriously, guy');
+
+    // Add validation
+    $('.concert').validate({
+        rules: {
+            alert: true
+        }
+    });
+
 
 });
 

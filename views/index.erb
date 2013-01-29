@@ -42,9 +42,9 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
           <!--
           <li><a href="/faq">FAQ</a></li>
           -->
-          <!--
+          
           <li><a href="/addconcert">Add a concert listing</a></li>
-          -->
+          
         </ul>
         <h3><a href='/' class="title">Concerto</a></h3>
       </div>
@@ -54,9 +54,9 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
       <div class="jumbotron">
         <h1>Introducing<br>Concerto,</h1>
         <p class="lead">A new way to find local concerts in Manitoba</p>
-        <!--
+        
         <a class="btn btn-large btn-primary" id="bigbutton" href="/addconcert">Add your own concert listing</a>
-        -->
+        
       </div>
       <br>
       <hr>
@@ -130,13 +130,13 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
 
 
 
-
-
           <div id="<%= concert[:id] %>" class="detail-container">
             <p class="address">
               Address
               <br>
               <%= concert[:address].gsub(", ", "<br>") %>
+              <br>
+              <a href="https://maps.google.com/maps?q=<%=concert[:address]%>">Get Directions</a>
             </p>
             <p class="pull-right admission">
               Admission
@@ -145,8 +145,11 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
               <%= sprintf("<br>Advance - $%.2f", concert[:advance]) if concert[:advance] != 0 %>
               <br>
             </p>
-            <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=<%=concert[:address] %>&size=480x200&sensor=false">
+            <a href="https://maps.google.com/maps?q=<%=concert[:address]%>">
+              <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=<%=concert[:address] %>&size=480x200&sensor=false">
+            </a>
           </div>
+
 
           <% count += 1 %>
           <% end %>

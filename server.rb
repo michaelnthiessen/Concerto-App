@@ -95,11 +95,11 @@ get '/prev/:pageNum' do
 	redirect to ('/page/' + (params[:pageNum].to_i - 1).to_s)
 end
 
-# get '/addconcert' do
+get '/addconcert' do
 
-# 	erb :addconcert
+	erb :addconcert
 
-# end
+end
 
 # Get data when people add a concert
 put '/addconcert' do
