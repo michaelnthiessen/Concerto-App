@@ -140,6 +140,7 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
               <%= sprintf("<br>Door - $%.2f", concert[:door]) if concert[:door] != 0 %>
               <%= sprintf("<br>Advance - $%.2f", concert[:advance]) if concert[:advance] != 0 %>
               <br>
+              <%= '<a href="/buytickets"> Buy Tickets </a>' if concert[:advance] != 0 %>
             </p>
             <a href="https://maps.google.com/maps?q=<%=concert[:address]%>">
               <img class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?markers=<%=concert[:address] %>&size=480x200&sensor=false">

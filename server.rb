@@ -101,6 +101,12 @@ get '/addconcert' do
 
 end
 
+get '/buytickets' do
+
+	erb :buytickets
+
+end
+
 # Get data when people add a concert
 put '/addconcert' do
 	erb :previewAdd
