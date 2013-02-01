@@ -136,7 +136,7 @@ mixpanel.init("155c2023a9c22c5c1741a3c0e711e284");</script><!-- end Mixpanel -->
             </p>
             <p class="pull-right admission">
               Admission
-              <%= '<br>FREE' if concert[:door] == 0 && concert[:advance] == 0 %>
+              <%= '<br>Unknown' if concert[:door] == 0 && concert[:advance] == 0 %>
               <%= sprintf("<br>Door - $%.2f", concert[:door]) if concert[:door] != 0 %>
               <%= sprintf("<br>Advance - $%.2f", concert[:advance]) if concert[:advance] != 0 %>
               <br>
