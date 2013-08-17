@@ -1,0 +1,14 @@
+TO-DO
+
+Updated Jan, 13
+
+Website
+	- Popups
+		- Add a close button to the top right of the popup window
+		- Close the currently open popup window when opening another
+		- Prevent popups from rendering off screen
+		- Add a way to track the number of views for each concert
+	- "Add your own concert" button could be interpreted as a list of concerts that the user is interested in going to
+	- Center the elements on the nav bar
+	- Possibly re-think how to break up the concert listings
+		- Single page, all concerts listed at once until a month
